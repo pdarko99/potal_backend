@@ -1,9 +1,13 @@
 import { getDataLogic } from "../service/registration.service.js";
 
 const getData = async (req, res, next) => {
-  let results = await getDataLogic();
-  console.log("do you proceed");
-  res.status(200).json({ results });
+  try {
+    let results = await getDataLogic();
+    console.log("do you proceed");
+    res.status(200).json({ results });
+  } catch (error) {
+    next(error);
+  }
 };
 
 export { getData };

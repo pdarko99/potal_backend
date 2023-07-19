@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import {registrationRouter} from "./routes/registration.route.js"
-// let registration_router = require("./routes/registration.route")
 const app = express();
 
 app.use(cors());
